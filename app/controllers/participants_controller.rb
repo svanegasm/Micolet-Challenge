@@ -7,7 +7,7 @@ class ParticipantsController < ApplicationController
         @participant = Participant.new(participant_params)
 
         if @participant.save
-            #ParticipantMailer.subscription_confirmation_email(@participant).deliver_now
+            ParticipantMailer.subscription_confirmation_email(@participant).deliver_now
             redirect_to ask_for_survey_participants_path(id: @participant.id)
         else
             render :new
