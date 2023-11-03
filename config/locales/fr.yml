@@ -1,0 +1,31 @@
+fr:
+  subtitle_logo: "Mode presque neuve avec garantie"
+  errors:
+    one: "1 erreur:"
+    other: "%{counter} les erreurs:"
+  previous_button: "Antérieur"
+  next_button: "Suivant"
+  submit_button: "Soumettre"
+  congrats_completion: "Toutes nos félicitations! Vous recevrez bientôt votre coupon de réduction."
+  thanks: "Merci beaucoup!"
+  participants: 
+    form:
+      welcome: "Accueillir! Bientôt, nous lancerons notre site dans ce pays."
+      subscribe_newsletter: "Abonnez-vous pour recevoir notre newsletter."
+      email: "E-mail"
+      preferences: "Préférences"
+      women_fashion: "La mode des femmes"
+      men_fashion: "La mode masculine"
+      children_fashion: "Mode Enfant"
+      subscribe_me: "Inscrivez-moi!"
+    ask_for_survey:
+      would_you_like_to_answer_a_survey: "Vous souhaitez répondre à une enquête ?"
+      you_can_get_a_discount_coupon: "Vous pouvez obtenir un coupon de réduction."
+      btn_yes: "OUI"
+      btn_no: "NON"
+  surveys:
+    form:
+      question1: "Question 1"
+      question2: "Question 2"
+      question3: "Question 3"
+      question4: "Question 4"

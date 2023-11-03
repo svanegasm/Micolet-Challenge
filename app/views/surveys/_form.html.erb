@@ -1,0 +1,36 @@
+<%= form_with(model: @survey, url: { action: :create, step: @step, participant_id: @participant_id }, html: { class: "space-y-6"}) do |form| %>
+    <% if @survey.errors.any? %>
+        <div id="error_explanation" class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded block">
+            <p class="font-bold"><%= t("errors", count: @survey.errors.count) %></p>
+            <ul>
+                <% @survey.errors.full_messages.each do |message| %>
+                    <li  class="block sm:inline"><%= message %></li>
+                <% end %>
+            </ul>
+        </div>
+    <% end %>
+
+    <% case @step %>
+    <% when 1 %>
+        <label class="block text-gray-700 font-bold"> <%= form.label :question1, t('.question1') %></label>
+        <%= form.text_field :question1, class: "block bg-white-100 w-full rounded border py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-500 sm:text-sm sm:leading-6" %>
+    <% when 2 %>
+        <label class="block text-gray-700 font-bold"> <%= form.label :question2, t('.question2') %></label>
+        <%= form.text_field :question2, class: "block bg-white-100 w-full rounded border py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-500 sm:text-sm sm:leading-6" %>
+        <%= form.submit t("previous_button"), name: "commit", class: "active:scale-[.98] active:duration-75 hover:scale-[1.01] ease-in-out transition-all py-3 px-4 rounded bg-gray-400 text-white text-lg font-bold" %>
+    <% when 3 %>
+        <label class="block text-gray-700 font-bold"> <%= form.label :question3, t('.question3') %></label>
+        <%= form.text_field :question3, class: "block bg-white-100 w-full rounded border py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-500 sm:text-sm sm:leading-6" %>
+        <%= form.submit t("previous_button"), name: "commit", class: "active:scale-[.98] active:duration-75 hover:scale-[1.01] ease-in-out transition-all py-3 px-4 rounded bg-gray-400 text-white text-lg font-bold" %>
+    <% when 4 %>
+        <label class="block text-gray-700 font-bold"> <%= form.label :question4, t('.question4') %></label>
+        <%= form.text_field :question4, class: "block bg-white-100 w-full rounded border py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-500 sm:text-sm sm:leading-6" %>
+        <%= form.submit t("previous_button"), name: "commit", class: "active:scale-[.98] active:duration-75 hover:scale-[1.01] ease-in-out transition-all py-3 px-4 rounded bg-gray-400 text-white text-lg font-bold" %>
+    <% end %>
+
+    <%= form.submit @step == 4 ? t("submit_button") : t("next_button"), id: "submit_button", name: "commit", class: "enabled:active:scale-[.98] enabled:active:duration-75 enabled:hover:scale-[1.01] ease-in-out transition-all py-3 px-4 rounded enabled:bg-green-400 text-white text-lg font-bold disabled:bg-gray-400" %>
+<% end %>
+
+<script>
+  window.step = <%= @step %>;
+</script>

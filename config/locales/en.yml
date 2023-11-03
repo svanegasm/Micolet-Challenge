@@ -1,0 +1,31 @@
+en:
+  subtitle_logo: "Almost new fashion with guarantee"
+  errors:
+    one: "1 error:"
+    other: "%{counter} errors:"
+  previous_button: "Previous"
+  next_button: "Next"
+  submit_button: "Submit"
+  congrats_completion: "Congratulations! You will soon receive your discount coupon."
+  thanks: "Thanks a lot!"
+  participants: 
+    form:
+      welcome: "Welcome! Soon we will launch our site in this country."
+      subscribe_newsletter: "Subscribe to receive our newsletter."
+      email: "Email"
+      preferences: "Preferences"
+      women_fashion: "Women's Fashion"
+      men_fashion: "Men's Fashion"
+      children_fashion: "Children's Fashion"
+      subscribe_me: "Subscribe me!"
+    ask_for_survey:
+      would_you_like_to_answer_a_survey: "Would you like to answer a survey?"
+      you_can_get_a_discount_coupon: "You can get a discount coupon."
+      btn_yes: "YES"
+      btn_no: "NO"
+  surveys:
+    form:
+      question1: "Question 1"
+      question2: "Question 2"
+      question3: "Question 3"
+      question4: "Question 4"

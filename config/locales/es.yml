@@ -1,0 +1,31 @@
+es:
+  subtitle_logo: "Moda casi nueva con garantía"
+  errors:
+    one: "1 error:"
+    other: "%{counter} errores:"
+  previous_button: "Anterior"
+  next_button: "Siguiente"
+  submit_button: "Enviar"
+  congrats_completion: "¡Felicitaciones! Pronto recibirás tu cupón de descuento."
+  thanks: "¡Muchas gracias!"
+  participants: 
+    form:
+      welcome: "¡Bienvenido! Pronto lanzaremos nuestro sitio en este país."
+      subscribe_newsletter: "Suscríbete para recibir nuestras noticias."
+      email: "Correo"
+      preferences: "Preferencias"
+      women_fashion: "Moda para Mujeres"
+      men_fashion: "Moda para Hombres"
+      children_fashion: "Moda para Niños y Niñas"
+      subscribe_me: "Subscribirme!"
+    ask_for_survey:
+      would_you_like_to_answer_a_survey: "¿Te gustaría responder una breve encuesta?"
+      you_can_get_a_discount_coupon: "Puedes ganarte un cupón de descuento."
+      btn_yes: "SI"
+      btn_no: "NO"
+  surveys:
+    form:
+      question1: "Pregunta 1"
+      question2: "Pregunta 2"
+      question3: "Pregunta 3"
+      question4: "Pregunta 4"
