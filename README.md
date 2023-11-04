@@ -1,24 +1,32 @@
-# README
+# Micolet Challenge
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Dependencies
 
-Things you may want to cover:
+- [Docker](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04)
+- [Docker Compose](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-compose-on-ubuntu-20-04)
 
-* Ruby version
+## Running the Application
 
-* System dependencies
+**1. Clone the repository and change to the project directory:**
 
-* Configuration
+```bash
+git clone https://github.com/svanegasm/Micolet-Challenge.git
+cd Micolet-Challenge
+```
 
-* Database creation
+**2. Check the status of the Docker service:**
+```bash
+sudo service docker status
+```
 
-* Database initialization
+If the Docker service is not running, start it:
+```bash
+sudo service docker start
+```
 
-* How to run the test suite
+**3. Build and start the application using Docker Compose:**
+```bash
+docker-compose up --build
+```
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+**This will set up the environment and start the application. You can access it in your web browser at http://localhost:3000.**
