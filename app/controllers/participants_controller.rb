@@ -10,7 +10,8 @@ class ParticipantsController < ApplicationController
             ParticipantMailer.subscription_confirmation_email(@participant).deliver_now
             redirect_to ask_for_survey_participants_path(id: @participant.id)
         else
-            render :new
+            redirect_to new_participant_path
+            flash[:notice] = "Something went wrong. Please, try again."
         end
     end
 
