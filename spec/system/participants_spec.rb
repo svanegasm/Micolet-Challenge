@@ -71,4 +71,11 @@ RSpec.describe "Participants", type: :system do
 
     expect(page).to have_content("Your Email address is invalid. Please try again")
   end
+
+  scenario 'Fail render surve cause participant_id does not exists' do
+    visit ask_for_survey_participants_path(id: 100)
+
+    click_link t('participants.ask_for_survey.btn_yes')
+    expect(page).to have_content("Participant not found. Please, try again.")
+  end
 end

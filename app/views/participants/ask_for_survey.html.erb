@@ -5,8 +5,8 @@
             <p><%=t('.you_can_get_a_discount_coupon')%></p>
         </div>
         <div class="mt-10 text-center">
-            <%= link_to t('.btn_no'), survey_decision_participants_path(id: @participant.id, answer: 'no'), method: :post, class: "button active:scale-[.98] active:duration-75 hover:scale-[1.01] ease-in-out transition-all py-3 px-5 rounded text-white text-lg font-bold bg-gray-400" %>
-            <%= link_to t('.btn_yes'), survey_decision_participants_path(id: @participant.id, answer: 'yes'), method: :post, class: "button active:scale-[.98] active:duration-75 hover:scale-[1.01] ease-in-out transition-all py-3 px-6 rounded bg-green-400 text-white text-lg font-bold ml-3" %>
+            <%= link_to t('.btn_no'), survey_decision_participants_path(id: @participant_id, answer: 'no'), method: :post, class: "button active:scale-[.98] active:duration-75 hover:scale-[1.01] ease-in-out transition-all py-3 px-5 rounded text-white text-lg font-bold bg-gray-400" %>
+            <%= link_to t('.btn_yes'), survey_decision_participants_path(id: @participant_id, answer: 'yes'), method: :post, class: "button active:scale-[.98] active:duration-75 hover:scale-[1.01] ease-in-out transition-all py-3 px-6 rounded bg-green-400 text-white text-lg font-bold ml-3" %>
         </div>
     </div>
 </div>

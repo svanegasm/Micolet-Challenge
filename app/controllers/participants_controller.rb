@@ -15,20 +15,23 @@ class ParticipantsController < ApplicationController
     end
 
     def ask_for_survey
-        @participant = Participant.find(params[:id])
+        @participant_id = params[:id]
     end
 
     def survey_decision
-        @participant = Participant.find(params[:id])
+        @participant = Participant.find_by(id: params[:id])
 
-        if params[:answer] == 'yes'
-            redirect_to new_survey_path(participant_id: @participant.id)
+        if @participant
+            if params[:answer] == 'yes'
+                redirect_to new_survey_path(participant_id: @participant.id)
+            else
+                render 'static_pages/no_survey.html.erb'
+            end
         else
-            render 'static_pages/no_survey.html.erb'
+            redirect_to new_participant_path
+            flash[:notice] = "Participant not found. Please, try again."
         end
     end
-
-    
 
     private
     def participant_params
