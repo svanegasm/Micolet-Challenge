@@ -11,7 +11,9 @@ class ParticipantsController < ApplicationController
             redirect_to ask_for_survey_participants_path(id: @participant.id)
         else
             redirect_to new_participant_path
-            flash[:notice] = "Something went wrong. Please, try again."
+            error_message = "Something went wrong. Please, try again."
+            error_message += @participant.errors.messages.to_s if @participant.errors.messages.present?
+            flash[:notice] = error_message
         end
     end
 
